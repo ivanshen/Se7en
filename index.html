@@ -7,12 +7,12 @@
         <table ng-controller="TableController">
     <tbody ng-repeat="test in testArr">
         <tr ng-repeat="t1 in test.first">
-            <td>{{t1.rolle}}</td>
-            <td>{{t1.value}}</td>
-            <td>{{testArr[1].second[$index].rolle}}</td>
-            <td>{{testArr[1].second[$index].value}}</td>
-            <td>{{testArr[2].third[$index].rolle}}</td>
-            <td>{{testArr[2].third[$index].value}}</td>
+            <td ng-click="clickElement(t1.rolle, $parent.$index, $index)">{{t1.rolle}}</td>
+            <td ng-click="clickElement(t1.value, $parent.$index, $index)">{{t1.value}}</td>
+            <td ng-click="clickElement(testArr[1].second[$index].rolle, $parent.$index, $index)">{{testArr[1].second[$index].rolle}}</td>
+            <td ng-click="clickElement(testArr[1].second[$index].value, $parent.$index, $index)">{{testArr[1].second[$index].value}}</td>
+            <td ng-click="clickElement(testArr[2].third[$index].rolle, $parent.$index, $index)">{{testArr[2].third[$index].rolle}}</td>
+            <td ng-click="clickElement(testArr[2].third[$index].value, $parent.$index, $index)">{{testArr[2].third[$index].value}}</td>
         </tr>
     </tbody>
         </table>
@@ -20,3 +20,4 @@
         <script src="/js/app.js"></script>
     </body>
 </html>
+

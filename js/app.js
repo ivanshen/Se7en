@@ -1,5 +1,7 @@
 var app = angular.module("myGame", []);
 app.controller ('TableController', function ($scope){
+
+    
      $scope.testArr = [{
         'first': [{
             'value': generate(),
@@ -72,6 +74,26 @@ app.controller ('TableController', function ($scope){
             'rolle': generate()
         }]
     }];
+
+    $scope.firstValue = 0;
+    $scope.secondClick = false;
+    $scope.clickElement = function(t1, outerindex, innerindex){
+        
+        if($scope.secondClick){
+            $scope.firstValue += t1;
+            $scope.secondClick = false;
+            console.log($scope.firstValue);
+            
+        }else{
+            $scope.firstValue = t1;
+            $scope.secondClick = true;
+            console.log($scope.firstValue);
+            console.log("index: " + outerindex + innerindex);
+        }
+        
+
+    }
+
 
 });
 
