@@ -72,7 +72,80 @@ app.controller ('TableController', function ($scope){
             'rolle': generate()
         }]
     }];
-
+    $scope.newNumber = function(){
+        $scope.testArr = [{
+        'first': [{
+            'value': generate(),
+            'rolle': generate()
+        },
+        {
+            'value': generate(),
+            'rolle': generate()
+        }, 
+        {
+            'value': generate(),
+            'rolle': generate()
+        },
+        {
+            'value': generate(),
+            'rolle': generate()
+        },
+        {
+            'value': generate(),
+            'rolle': generate()
+        },
+        {
+            'value': generate(),
+            'rolle': generate()
+        }]
+    }, {
+        'second': [{
+            'value': generate(),
+            'rolle': generate()
+        }, {
+            'value': generate(),
+            'rolle': generate()
+        }, {
+            'value': generate(),
+            'rolle': generate()
+        },
+                  {
+            'value': generate(),
+            'rolle': generate()
+        },
+        {
+            'value': generate(),
+            'rolle': generate()
+        },
+        {
+            'value': generate(),
+            'rolle': generate()
+        }]
+    }, {
+        'third': [{
+            'value': generate(),
+            'rolle': generate()
+        }, {
+            'value': generate(),
+            'rolle': generate()
+        }, {
+            'value': generate(),
+            'rolle': generate()
+        },
+                  {
+            'value': generate(),
+            'rolle': generate()
+        },
+        {
+            'value': generate(),
+            'rolle': generate()
+        },
+        {
+            'value': generate(),
+            'rolle': generate()
+        }]
+    }];
+    };
 });
 
 var generate = function() {
