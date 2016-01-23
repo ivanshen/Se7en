@@ -46,12 +46,6 @@ $scope.start = function () {
     var oneMinute = 60,
     display = document.querySelector('#time');
     startTimer(oneMinute, display);
-    /*$scope.$apply(function() {
-        $("td").click(function(){
-            console.log(this)
-            $(this).toggleClass("focus");
-        });
-    });*/
 }
         
     $scope.clickElement = function(t1, $event, x, y){
