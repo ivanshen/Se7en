@@ -83,4 +83,3 @@ $scope.start = function () {
 var generate = function() {
     return {value: Math.floor(Math.random() * (10 - (-3)) + (-3)), isSelected: false}
 }
-var get

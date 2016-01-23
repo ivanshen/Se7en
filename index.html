@@ -18,23 +18,22 @@
         <h1>Points: {{points}} </h1>
         <h1>Timer:<span id="time">01:00</span></h1> 
         <div class="container-fluid inner">
-        <table class="tableizer-table">
-            <tbody ng-repeat="test in testArr">
-                <tr>
-                    <td class="focus" ng-repeat="t1 in test track by $index" ng-click="clickElement(t1, $event, $parent.$index, $index)" ng-class="getClass(t1.isSelected)"><a id="selection" href="#" style="text-decoration:none">{{t1.value}}</a></td>
-                </tr>
-            </tbody>
-        </table>
-        <button id="newNumbersBtn" type="button" ng-click="newNumber()">Get me new numbers!</button>
-        <div class = "instructions">
-            <h1>Instructions: Make 7.</h1>
-            <button id="startbtn"type="button" ng-click="start()" onclick="document.getElementById('startbtn').style.display='none'; document.getElementById('newNumbersBtn').style.display='block';">Start!</button>
+            <table class="tableizer-table">
+                <tbody ng-repeat="test in testArr">
+                    <tr>
+                        <td class="focus" ng-repeat="t1 in test track by $index" ng-click="clickElement(t1, $event, $parent.$index, $index)" ng-class="getClass(t1.isSelected)"><a id="selection" href="#" style="text-decoration:none">{{t1.value}}</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button id="newNumbersBtn" type="button" ng-click="newNumber()">Get me new numbers!</button>
+            <div class = "instructions">
+                <h1>Instructions: Make 7.</h1>
+                <button id="startbtn"type="button" ng-click="start()" onclick="document.getElementById('startbtn').style.display='none'; document.getElementById('newNumbersBtn').style.display='block';">Start!</button>
+            </div>
         </div>
-        </div>
-  
-            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
-            <script src="js/app.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+        <script src="js/app.js"></script>
     </body>
 </html>
 
