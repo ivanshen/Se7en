@@ -1,0 +1,22 @@
+<html ng-app="myGame">
+    <head>
+        <title>HTML Tables</title>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <table ng-controller="TableController">
+    <tbody ng-repeat="test in testArr">
+        <tr ng-repeat="t1 in test.first">
+            <td>{{t1.rolle}}</td>
+            <td>{{t1.value}}</td>
+            <td>{{testArr[1].second[$index].rolle}}</td>
+            <td>{{testArr[1].second[$index].value}}</td>
+            <td>{{testArr[2].third[$index].rolle}}</td>
+            <td>{{testArr[2].third[$index].value}}</td>
+        </tr>
+    </tbody>
+        </table>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+        <script src="/js/app.js"></script>
+    </body>
+</html>
