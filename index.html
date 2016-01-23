@@ -1,40 +1,40 @@
 <html ng-app="myGame">
     <head>
-        <title>HTML Tables</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Se7en</title>
+          
+        <link href="http://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Muli:300,400" rel="stylesheet" type="text/css">
+    
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/main.css">
     </head>
-<<<<<<< HEAD
-    <body>
-        <table ng-controller="TableController">
-    <tbody ng-repeat="test in testArr">
-        <tr ng-repeat="t1 in test.first">
-            <td ng-click="clickElement(t1.rolle, $parent.$index, $index)">{{t1.rolle}}</td>
-            <td ng-click="clickElement(t1.value, $parent.$index, $index)">{{t1.value}}</td>
-            <td ng-click="clickElement(testArr[1].second[$index].rolle, $parent.$index, $index)">{{testArr[1].second[$index].rolle}}</td>
-            <td ng-click="clickElement(testArr[1].second[$index].value, $parent.$index, $index)">{{testArr[1].second[$index].value}}</td>
-            <td ng-click="clickElement(testArr[2].third[$index].rolle, $parent.$index, $index)">{{testArr[2].third[$index].rolle}}</td>
-            <td ng-click="clickElement(testArr[2].third[$index].value, $parent.$index, $index)">{{testArr[2].third[$index].value}}</td>
-        </tr>
-    </tbody>
-=======
+    
     <body ng-controller="TableController">
-        <table>
+        <h1>Points: {{points}} </h1>
+        <h1>Timer:<span id="time">01:00</span></h1> 
+        <div class="container-fluid inner">
+        <table class="tableizer-table">
             <tbody ng-repeat="test in testArr">
-                <tr ng-repeat="t1 in test.first">
-                    <td>{{t1.rolle}}</td>
-                    <td>{{t1.value}}</td>
-                    <td>{{testArr[1].second[$index].rolle}}</td>
-                    <td>{{testArr[1].second[$index].value}}</td>
-                    <td>{{testArr[2].third[$index].rolle}}</td>
-                    <td>{{testArr[2].third[$index].value}}</td>
+                <tr>
+                    <td class="focus" ng-repeat="t1 in test track by $index" ng-click="clickElement(t1, $event, $parent.$index, $index)" ng-class="getClass(t1.isSelected)"><a id="selection" href="#" style="text-decoration:none">{{t1.value}}</a></td>
                 </tr>
             </tbody>
->>>>>>> master
         </table>
-        <button type="button" ng-click="newNumber()">Get me new numbers!</button>
-        <h1>Timer:<span id="time">01:00</span></h1>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-        <script src="/js/app.js"></script>
+        <button id="newNumbersBtn" type="button" ng-click="newNumber()">Get me new numbers!</button>
+        <div class = "instructions">
+            <h1>Instructions: Make 7.</h1>
+            <button id="startbtn"type="button" ng-click="start()" onclick="document.getElementById('startbtn').style.display='none'; document.getElementById('newNumbersBtn').style.display='block';">Start!</button>
+        </div>
+        </div>
+  
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+            <script src="/js/app.js"></script>
     </body>
 </html>
 
