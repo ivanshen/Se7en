@@ -79,9 +79,6 @@ $scope.start = function () {
         }
         return "notSelected";
     }
-    $scope.playAgain = function(){
-        $scope.init();
-    }
 });
 
 var generate = function() {
