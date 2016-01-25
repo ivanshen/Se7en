@@ -26,10 +26,15 @@
                 </tbody>
             </table>
             <button id="newNumbersBtn" type="button" ng-click="newNumber()">Get me new numbers!</button>
-            <div class = "instructions">
+            <div class="instructions" ng-show="timeleft">
                 <h1>Instructions: Make 7.</h1>
-                <button id="startbtn"type="button" ng-click="start()" onclick="document.getElementById('startbtn').style.display='none'; document.getElementById('newNumbersBtn').style.display='block';">Start!</button>
+                <button id="startbtn" type="button" ng-click="start()" onclick="document.getElementById('startbtn').style.display='none'; document.getElementById('newNumbersBtn').style.display='block';">Start!</button>
             </div>
+            <div class= "instructions" ng-hide="timeleft">
+                <h1>Your score: {{points}}</h1>
+                <button type="button" ng-click="playAgain()">Play Again</button>
+            </div>
+            
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>

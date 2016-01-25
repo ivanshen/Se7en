@@ -7,7 +7,7 @@ app.controller ('TableController', function ($scope){
     $scope.x1 = 0;
     $scope.y1 = 0;
     $scope.points = 0;
-    $scope.timeleft = true;
+    $scope.timeleft =  true;
     var startTimer = function(duration, display) {
         var timer = duration, minutes, seconds;
         var myTimer = setInterval(function () {
@@ -34,6 +34,7 @@ $scope.start = function () {
          [generate(), generate(),generate(),generate(),generate(),generate()]
      ];
     $scope.newNumber = function(){
+        $scope.firstValue = null;
         $scope.testArr = [
          [generate(), generate(),generate(),generate(),generate(),generate()],
          [generate(), generate(),generate(),generate(),generate(),generate()],
@@ -43,7 +44,7 @@ $scope.start = function () {
          [generate(), generate(),generate(),generate(),generate(),generate()]
      ];
     };
-    var oneMinute = 60,
+    var oneMinute = 5,
     display = document.querySelector('#time');
     startTimer(oneMinute, display);
 }
@@ -77,6 +78,9 @@ $scope.start = function () {
             return "selected";
         }
         return "notSelected";
+    }
+    $scope.playAgain = function(){
+        $scope.init();
     }
 });
 
