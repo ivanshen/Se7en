@@ -44,7 +44,7 @@ $scope.start = function () {
          [generate(), generate(),generate(),generate(),generate(),generate()]
      ];
     };
-    var oneMinute = 5,
+    var oneMinute = 60,
     display = document.querySelector('#time');
     startTimer(oneMinute, display);
 }
